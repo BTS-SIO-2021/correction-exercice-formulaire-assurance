@@ -55,6 +55,10 @@ if(isset($_POST['age']) && isset($_POST['anciennetePermis']) && isset($_POST['as
    $ancienneteAssurance = stripslashes($ancienneteAssurance);
    $ancienneteAssurance = htmlspecialchars($ancienneteAssurance);
    $ancienneteAssurance = filter_var($ancienneteAssurance, FILTER_SANITIZE_NUMBER_INT);
+   $ancienneteAssurance = intval($ancienneteAssurance);
+
+   var_dump($ancienneteAssurance);
+
 
    // Il faudrait appliquer l'ensemble des functions de "nettoyage" à chacun des index de $_POST, mais là je suis fainéante et vous avez compris le principe. 
 
